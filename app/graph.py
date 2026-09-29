@@ -26,12 +26,11 @@ llm = ChatOpenAI(
     temperature=0,
     api_key=NVIDIA_API_KEY,
     base_url="https://integrate.api.nvidia.com/v1",
-    timeout=30,
+    timeout=10,
     max_retries=0,
-    max_tokens=150,
+    max_tokens=300,
     reasoning_effort="low",
 )
-
 
 def retrieve_node(state: RAGState):
     documents = retriever.invoke(state["query"])
