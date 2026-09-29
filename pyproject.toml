@@ -3,6 +3,7 @@ name = "agentic-rag-chatbot"
 version = "0.1.0"
 description = "Agentic AI RAG Chatbot using LangGraph and Pinecone"
 requires-python = ">=3.12"
+dependencies = ["fastapi", "uvicorn", "python-dotenv", "langchain", "langchain-community", "langchain-openai", "langchain-pinecone", "langchain-google-genai", "langgraph", "pinecone", "pypdf", "langchain-text-splitters"]
 
 [tool.vercel]
 entrypoint = "app.api:app"
