@@ -1,4 +1,22 @@
 from fastapi import FastAPI, HTTPException
+
+from app.graph import rag_graph
+from app.schemas import ChatRequest, ChatResponse
+
+
+app = FastAPI(
+    title="Agentic AI RAG Chatbot",
+    version="1.0.0"
+)
+
+
+@app.get("/")
+def home():
+    return {
+        "message": "Agentic AI RAG Chatbot is running"
+    }
+
+
 @app.post("/chat", response_model=ChatResponse)
 def chat(request: ChatRequest):
     try:
