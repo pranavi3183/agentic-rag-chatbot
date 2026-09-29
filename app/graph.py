@@ -26,9 +26,9 @@ llm = ChatOpenAI(
     temperature=0,
     api_key=NVIDIA_API_KEY,
     base_url="https://integrate.api.nvidia.com/v1",
-    timeout=60,
-    max_retries=1,
-    max_tokens=500,
+    timeout=30,
+    max_retries=0,
+    max_tokens=150,
     reasoning_effort="low",
 )
 
